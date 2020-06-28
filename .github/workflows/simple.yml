@@ -19,3 +19,11 @@ jobs:
           print(os.environ['PATH'])
           print(platform.processor())
         shell: python
+  run-shell-command-windows:
+    runs-on: windows-latest
+    steps:
+      - name: run powershell command
+        run: Get-Location
+      - name: run bash command
+        run: pwd
+        shell: bash
