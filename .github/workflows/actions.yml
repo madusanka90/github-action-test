@@ -12,6 +12,7 @@ jobs:
         run: |
           pwd
           ls -al
+          env
       - name: Run javascript action
         id: greet
         uses: actions/hello-world-javascript-action@v1

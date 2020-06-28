@@ -1,4 +1,4 @@
-name: Shall Commands
+name: Shell Commands
 
 on: [push]
 
