@@ -21,6 +21,7 @@ jobs:
         shell: python
   run-shell-command-windows:
     runs-on: windows-latest
+    needs: [run-shell-command]
     steps:
       - name: run powershell command
         run: Get-Location
