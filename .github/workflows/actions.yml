@@ -1,27 +1,15 @@
-name: Action Workflow
+name: LZ config deployment
 
 on:
   push:
-  schedule:
-    - cron: "10 * * * *"
-  pull_request:
-    types: [opened,reopened,closed,assigned]
 
 jobs:
-  run-github-actions:
+  deploy:
+    name: 'Deploy'
     runs-on: ubuntu-latest
     steps:
-      - name: Clone a git repo
-        uses: actions/checkout@v2
       - name: List Files after checkout
         run: |
           pwd
           ls -al
           env
-      - name: Run javascript action
-        id: greet
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: Bhagya
-      - name: Get output of step1
-        run: echo "${{ steps.greet.outputs.time }}"
